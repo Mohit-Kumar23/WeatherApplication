@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context=".currentWeather_home_fragment"
+    android:id="@+id/currentWeatherFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hguide_cwhf_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hguide_cwhf_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.43" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vguide_cwfm_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vguide_cwhf_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/card_view_custom"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="500dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/hguide_cwhf_2"
+        app:layout_constraintEnd_toStartOf="@+id/vguide_cwhf_2"
+        app:layout_constraintStart_toStartOf="@+id/vguide_cwfm_1"
+        app:layout_constraintTop_toTopOf="@+id/hguide_cwhf_1">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_view_custom">
+
+            <ImageView
+                android:id="@+id/iv_cwhf_max_temp_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_max_temp_icon" />
+
+            <TextView
+                android:id="@+id/tv_cwhf_max_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="22dp"
+                android:layout_toEndOf="@id/iv_cwhf_max_temp_icon"
+                android:fontFamily="@font/koho_regular"
+                android:textStyle="bold
+"
+                android:text="25.6&#xb0;C"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_cwhf_current_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iv_cwhf_max_temp_icon"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginRight="40dp"
+                android:gravity="center"
+                android:text="23.65"
+                android:fontFamily="@font/koho_regular"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/tv_degreeC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="57dp"
+                android:layout_toRightOf="@id/iv_cwhf_max_temp_icon"
+                android:layout_marginStart="60dp"
+                android:fontFamily="@font/koho_regular"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="&#xb0;C"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/iv_cwhf_min_temp_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="125dp"
+                android:foregroundGravity="right"
+                android:src="@drawable/ic_min_temp_icon" />
+
+            <TextView
+                android:id="@+id/tv_cwhf_min_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="132dp"
+                android:layout_toRightOf="@id/iv_cwhf_min_temp_icon"
+                android:fontFamily="@font/koho_regular"
+                android:textStyle="bold"
+                android:text="25.6&#xb0;C"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hguide_cwhf_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.37"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vguide_cwhf_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vguide_cwhf_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hguide_cwhf_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2"/>
+
+    <TextView
+        android:id="@+id/tv_cwhf_currentCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Naliya"
+        android:fontFamily="@font/koho_regular"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@id/hguide_cwhf_1"
+        app:layout_constraintLeft_toRightOf="@id/vguide_cwhf_3"/>
+
+    <ImageView
+        android:id="@+id/iv_cwhf_sunriseImg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_sunrise"
+        app:layout_constraintBottom_toBottomOf="@id/hguide_cwhf_2"
+        app:layout_constraintLeft_toLeftOf="@id/vguide_cwhf_3"
+        app:layout_constraintRight_toRightOf="@id/vguide_cwfm_1"
+        app:layout_constraintTop_toTopOf="@id/hguide_cwhf_4" />
+
+
+    <ImageView
+        android:id="@+id/iv_cwhf_sunsetImg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/hguide_cwhf_2"
+        app:layout_constraintRight_toRightOf="@id/vguide_cwhf_4"
+        app:layout_constraintLeft_toLeftOf="@id/vguide_cwhf_2"
+        app:layout_constraintTop_toTopOf="@id/hguide_cwhf_4"
+        android:src="@drawable/ic_sunset"/>
+
+    <TextView
+        android:id="@+id/tv_cwhf_sunsetTime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="18:06"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:fontFamily="@font/koho_regular"
+        app:layout_constraintBottom_toTopOf="@+id/hguide_cwhf_2"
+        app:layout_constraintEnd_toStartOf="@+id/vguide_cwhf_4"
+        app:layout_constraintStart_toStartOf="@+id/vguide_cwhf_2"
+        app:layout_constraintTop_toTopOf="@+id/hguide_cwhf_3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hguide_ma_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.26"/>
+
+    <TextView
+        android:id="@+id/tv_cwhf_sunriseTime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="06:23"
+        android:textColor="@color/black"
+        android:fontFamily="@font/koho_regular"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/hguide_ma_5"
+        app:layout_constraintEnd_toStartOf="@+id/vguide_cwfm_1"
+        app:layout_constraintStart_toStartOf="@+id/vguide_cwhf_3"
+        app:layout_constraintTop_toTopOf="@+id/hguide_cwhf_4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hguide_cwhf_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@android:color/transparent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/hguide_cwhf_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

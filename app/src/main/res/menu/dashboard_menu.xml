@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/currWeather"
+        android:icon="@drawable/weather_icon"
+        android:title="Weather" />
+
+    <item
+        android:id="@+id/atmosphere"
+        android:title="Atmosphere"
+        android:icon="@drawable/rainy"/>
+
+    <item
+        android:id="@+id/map_menu"
+        android:title="Map"
+        android:icon="@drawable/weather_map"/>
+
+    <item
+        android:id="@+id/closeDrawer"
+        android:title="Close"
+        android:icon="@drawable/ic_baseline_arrow_forward_24"/>
+</menu>

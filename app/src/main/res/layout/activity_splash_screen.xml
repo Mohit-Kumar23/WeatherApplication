@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_screen"
+    tools:context=".SplashScreen">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hguide_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.42"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hguide_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.60"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vguide_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.31"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vguide_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/hguide_2"
+        app:layout_constraintEnd_toStartOf="@+id/vguide_2"
+        app:layout_constraintStart_toStartOf="@+id/vguide_1"
+        app:layout_constraintTop_toTopOf="@+id/hguide_1"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/s_anim"
+        app:lottie_speed="1.0" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/vguide_2"
+        app:layout_constraintStart_toStartOf="@+id/vguide_1"
+        app:layout_constraintTop_toTopOf="@+id/hguide_2"
+        android:text="WEATHER AT YOURS..."
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:fontFamily="cursive"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

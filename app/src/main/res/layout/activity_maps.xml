@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        map:uiRotateGestures="false"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/efab_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:elevation="5dp"
+        android:text="Layers"
+        android:fontFamily="@font/koho_regular"
+        map:icon="@drawable/ic_baseline_add_24"
+        android:shadowDy="2"
+        android:shadowDx="1"/>
+
+    <TextView
+        android:id="@+id/tv_map_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature"
+        android:textSize="15sp"
+        map:layout_constraintEnd_toStartOf="@id/fab_temperature"
+        map:layout_constraintBottom_toBottomOf="@id/fab_temperature"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/black"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        android:fontFamily="@font/koho_regular"
+        android:padding="5dp"
+        android:layout_marginEnd="10dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/temperature_fab"
+        android:backgroundTint="@color/white"
+        android:visibility="invisible"
+        map:layout_constraintBottom_toTopOf="@id/efab_map"
+        map:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_map_clouds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clouds"
+        android:visibility="invisible"
+        android:textSize="15sp"
+        map:layout_constraintEnd_toStartOf="@id/fab_clouds"
+        map:layout_constraintBottom_toBottomOf="@id/fab_clouds"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/koho_regular"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:layout_marginEnd="10dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_clouds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        map:layout_constraintBottom_toTopOf="@id/fab_temperature"
+        map:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="22dp"
+        android:visibility="invisible"
+        android:src="@drawable/cloud_fab"
+        android:backgroundTint="@color/white"
+        android:layout_marginBottom="8dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_map_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pressure"
+        android:textSize="15sp"
+        map:layout_constraintEnd_toStartOf="@id/fab_pressure"
+        map:layout_constraintBottom_toBottomOf="@id/fab_pressure"
+        android:layout_marginBottom="12dp"
+        android:visibility="invisible"
+        android:textColor="@color/black"
+       android:fontFamily="@font/koho_regular"
+        android:padding="5dp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_marginEnd="10dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pressure_fab"
+        android:backgroundTint="@color/white"
+        map:layout_constraintBottom_toTopOf="@id/fab_clouds"
+        map:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="22dp"
+        android:visibility="invisible"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_map_precipitation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precipitation"
+        android:textSize="15sp"
+        map:layout_constraintEnd_toStartOf="@id/fab_precipitation"
+        android:visibility="invisible"
+        map:layout_constraintBottom_toBottomOf="@id/fab_precipitation"
+        android:layout_marginBottom="12dp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/koho_regular"
+        android:padding="5dp"
+        android:layout_marginEnd="10dp"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_precipitation"
+        android:layout_width="wrap_content"
+        android:src="@drawable/precipitation_fab"
+        android:backgroundTint="@color/white"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        map:layout_constraintBottom_toTopOf="@id/fab_pressure"
+        map:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_map_wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wind"
+        android:textSize="15sp"
+        map:layout_constraintEnd_toStartOf="@id/fab_wind"
+        map:layout_constraintBottom_toBottomOf="@id/fab_wind"
+        android:visibility="invisible"
+        android:fontFamily="@font/koho_regular"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/black"
+        android:padding="5dp"
+        android:layout_marginEnd="10dp"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/wind_fab"
+        android:backgroundTint="@color/white"
+        android:visibility="invisible"
+        map:layout_constraintBottom_toTopOf="@id/fab_precipitation"
+        map:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="8dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
