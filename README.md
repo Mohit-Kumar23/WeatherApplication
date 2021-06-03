@@ -53,12 +53,12 @@ Icon
 <html>
 <body>
 
-<img src="https://github.com/Mohit-Kumar23/WeatherApp/blob/main/screenshots_app/1_splashScreen.jpg" width="200">
-<img src="https://github.com/Mohit-Kumar23/WeatherApp/blob/main/screenshots_app/2_homeWeatherScreen.jpg" width="200">
-<img src="https://github.com/Mohit-Kumar23/WeatherApp/blob/main/screenshots_app/3_searchScreen.jpg" width="200">
-<img src="https://github.com/Mohit-Kumar23/WeatherApp/blob/main/screenshots_app/4_dashboard.jpg" width="200">
-<img src="https://github.com/Mohit-Kumar23/WeatherApp/blob/main/screenshots_app/5_atmosphereScreen.jpg" width="200">
-<img src="https://github.com/Mohit-Kumar23/WeatherApp/blob/main/screenshots_app/6_mapTilesScreen.jpg" width="200">
+<img src="https://github.com/Mohit-Kumar23/WeatherApplication/blob/main/screenshots_app/1_splashScreen.jpg" width="200">
+<img src="https://github.com/Mohit-Kumar23/WeatherApplication/blob/main/screenshots_app/2_homeWeatherScreen.jpg" width="200">
+<img src="https://github.com/Mohit-Kumar23/WeatherApplication/blob/main/screenshots_app/3_searchScreen.jpg" width="200">
+<img src="https://github.com/Mohit-Kumar23/WeatherApplication/blob/main/screenshots_app/4_dashboard.jpg" width="200">
+<img src="https://github.com/Mohit-Kumar23/WeatherApplication/blob/main/screenshots_app/5_atmosphereScreen.jpg" width="200">
+<img src="https://github.com/Mohit-Kumar23/WeatherApplication/blob/main/screenshots_app/6_mapTilesScreen.jpg" width="200">
 
 </body>
 </html>
